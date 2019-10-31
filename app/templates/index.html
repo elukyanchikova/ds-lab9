@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+		<style>
+				body {
+				 background: #b96db6;
+				 color: rgb(27, 4, 4); 
+				}
+			   </style>
+</head>
+<body>
+<h1>Distributed Systems - Fall'19 - Lab 9</h1>
+<p><i>Elena Lukyanchikova, B17-SE-01</i></p>
+
+<form method="POST">
+	<input type="text" name="Author" placeholder="Tudor name">
+	<input type="text" name="Message" placeholder="The Message">
+
+	<input type="submit" value="send a dove">
+</form>
+
+<div >
+	<ul>
+		{% for msg in messages %}
+			<li>
+				<div><b>{{ msg['author'] }}:</b></div>
+				<div>{{ msg['content'] }}</div>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+</body>
