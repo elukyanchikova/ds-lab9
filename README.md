@@ -1,15 +1,15 @@
 # ds-lab9
 ## Screenshots of chat 
-### 1st when all instances were active
+### 1st, when all instances were active
 ![Before stopping 1 instance](https://github.com/elukyanchikova/ds-lab9/raw/master/image1.jpg)
-###  2nd when one is stopped 
+###  2nd, when one is stopped 
 ![After stopping 1 instance](https://github.com/elukyanchikova/ds-lab9/raw/master/image2.jpg)
-### 3rd The last is the whole chat
+### 3rd, The last is the whole chat
 ![The full story](https://github.com/elukyanchikova/ds-lab9/raw/master/full_story.jpg)
 
 
 ## 1st instance
-When all the instances were active, the main node had the following status and config:
+When all the instances were active, the main node had the following status and config:  
 rs.status()
 ```json
 MongoDB shell version v4.2.1
