@@ -1,5 +1,15 @@
 # ds-lab9
+## Screenshots of chat 
+### 1st when all instances were active
+![Before stopping 1 instance](https://github.com/elukyanchikova/ds-lab9/raw/master/image1.jpg)
+###  2nd when one is stopped 
+![After stopping 1 instance](https://github.com/elukyanchikova/ds-lab9/raw/master/image2.jpg)
+### 3rd The last is the whole chat
+![The full story](https://github.com/elukyanchikova/ds-lab9/raw/master/full_story.jpg)
+
+
 ## 1st instance
+When all the instances were active, the main node had the following status and config:
 rs.status()
 ```json
 MongoDB shell version v4.2.1
@@ -223,7 +233,7 @@ MongoDB server version: 4.2.1
 }
 ```
 ## 2nd intance
-
+After 1st instance(the main node) was stopped no info was missed and replicas still allowed the chat to work.
 rs.status()
 ```json
 MongoDB shell version v4.2.1
@@ -445,140 +455,5 @@ MongoDB server version: 4.2.1
                 },
                 "replicaSetId" : ObjectId("5dbaf7a54e838a355a78fa5f")
         }
-}
-```
-## 3rd instance
-
-rs.status()
-```json
-MongoDB shell version v4.2.1
-connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
-Implicit session: session { "id" : UUID("bc20d082-4deb-4486-86c2-c69680c37cfa") }
-MongoDB server version: 4.2.1
-{
-        "set" : "lab9",
-        "date" : ISODate("2019-10-31T15:19:17.886Z"),
-        "myState" : 2,
-        "term" : NumberLong(1),
-        "syncingTo" : "mongo1:27017",
-        "syncSourceHost" : "mongo1:27017",
-        "syncSourceId" : 0,
-        "heartbeatIntervalMillis" : NumberLong(2000),
-        "majorityVoteCount" : 2,
-        "writeMajorityCount" : 2,
-        "optimes" : {
-                "lastCommittedOpTime" : {
-                        "ts" : Timestamp(1572535152, 1),
-                        "t" : NumberLong(1)
-                },
-                "lastCommittedWallTime" : ISODate("2019-10-31T15:19:12.672Z"),
-                "readConcernMajorityOpTime" : {
-                        "ts" : Timestamp(1572535152, 1),
-                        "t" : NumberLong(1)
-                },
-                "readConcernMajorityWallTime" : ISODate("2019-10-31T15:19:12.672Z"),
-                "appliedOpTime" : {
-                        "ts" : Timestamp(1572535152, 1),
-                        "t" : NumberLong(1)
-                },
-                "durableOpTime" : {
-                        "ts" : Timestamp(1572535152, 1),
-                        "t" : NumberLong(1)
-                },
-                "lastAppliedWallTime" : ISODate("2019-10-31T15:19:12.672Z"),
-                "lastDurableWallTime" : ISODate("2019-10-31T15:19:12.672Z")
-        },
-        "lastStableRecoveryTimestamp" : Timestamp(1572535152, 1),
-        "lastStableCheckpointTimestamp" : Timestamp(1572535152, 1),
-        "members" : [
-                {
-                        "_id" : 0,
-                        "name" : "mongo1:27017",
-                        "ip" : "172.31.33.59",
-                        "health" : 1,
-                        "state" : 1,
-                        "stateStr" : "PRIMARY",
-                        "uptime" : 975,
-                        "optime" : {
-                                "ts" : Timestamp(1572535152, 1),
-                                "t" : NumberLong(1)
-                        },
-                        "optimeDurable" : {
-                                "ts" : Timestamp(1572535152, 1),
-                                "t" : NumberLong(1)
-                        },
-                        "optimeDate" : ISODate("2019-10-31T15:19:12Z"),
-                        "optimeDurableDate" : ISODate("2019-10-31T15:19:12Z"),
-                        "lastHeartbeat" : ISODate("2019-10-31T15:19:15.920Z"),
-                        "lastHeartbeatRecv" : ISODate("2019-10-31T15:19:16.385Z"),
-                        "pingMs" : NumberLong(0),
-                        "lastHeartbeatMessage" : "",
-                        "syncingTo" : "",
-                        "syncSourceHost" : "",
-                        "syncSourceId" : -1,
-                        "infoMessage" : "",
-                        "electionTime" : Timestamp(1572534191, 1),
-                        "electionDate" : ISODate("2019-10-31T15:03:11Z"),
-                        "configVersion" : 1
-                },
-                {
-                        "_id" : 1,
-                        "name" : "mongo2:27017",
-                        "ip" : "172.31.31.136",
-                        "health" : 1,
-                        "state" : 2,
-                        "stateStr" : "SECONDARY",
-                        "uptime" : 975,
-                        "optime" : {
-                                "ts" : Timestamp(1572535152, 1),
-                                "t" : NumberLong(1)
-                        },
-                        "optimeDurable" : {
-                                "ts" : Timestamp(1572535152, 1),
-                                "t" : NumberLong(1)
-                        },
-                        "optimeDate" : ISODate("2019-10-31T15:19:12Z"),
-                        "optimeDurableDate" : ISODate("2019-10-31T15:19:12Z"),
-                        "lastHeartbeat" : ISODate("2019-10-31T15:19:16.526Z"),
-                        "lastHeartbeatRecv" : ISODate("2019-10-31T15:19:16.595Z"),
-                        "pingMs" : NumberLong(2),
-                        "lastHeartbeatMessage" : "",
-                        "syncingTo" : "mongo1:27017",
-                        "syncSourceHost" : "mongo1:27017",
-                        "syncSourceId" : 0,
-                        "infoMessage" : "",
-                        "configVersion" : 1
-                },
-                {
-                        "_id" : 2,
-                        "name" : "mongo3:27017",
-                        "ip" : "172.31.45.28",
-                        "health" : 1,
-                        "state" : 2,
-                        "stateStr" : "SECONDARY",
-                        "uptime" : 1608,
-                        "optime" : {
-                                "ts" : Timestamp(1572535152, 1),
-                                "t" : NumberLong(1)
-                        },
-                        "optimeDate" : ISODate("2019-10-31T15:19:12Z"),
-                        "syncingTo" : "mongo1:27017",
-                        "syncSourceHost" : "mongo1:27017",
-                        "syncSourceId" : 0,
-                        "infoMessage" : "",
-                        "configVersion" : 1,
-                        "self" : true,
-                        "lastHeartbeatMessage" : ""
-                }
-        ],
-        "ok" : 1,
-        "$clusterTime" : {
-                "clusterTime" : Timestamp(1572535152, 1),
-                "signature" : {
-                        "hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
-                        "keyId" : NumberLong(0)
-                }
-        },
-        "operationTime" : Timestamp(1572535152, 1)
 }
 ```
