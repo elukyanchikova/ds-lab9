@@ -233,7 +233,7 @@ MongoDB server version: 4.2.1
 }
 ```
 ## 2nd intance
-After 1st instance(the main node) was stopped no info was missed and replicas still allowed the chat to work.
+After 1st instance(the main node) was stopped no info was missed and replicas still allowed the chat to work.   
 rs.status()
 ```json
 MongoDB shell version v4.2.1
