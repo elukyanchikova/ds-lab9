@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 import pymongo
 
 app = Flask(__name__)
-db_client = pymongo.MongoClient('mongodb://18.188.243.182:27017')
+db_client = pymongo.MongoClient('mongodb://18.188.243.182:27017,18.188.243.182:27017,18.219.98.242:27017/?replicaSet=lab9')
 db = db_client['chat']
 
 @app.route('/')
